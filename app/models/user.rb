@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :token_authenticatable, :confirmable 
   # attr_accessible :title, :body
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessbile :username
+  attr_accessible :username
 
   has_many :photos
   has_many :friends

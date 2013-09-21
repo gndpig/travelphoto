@@ -1,10 +1,14 @@
 Travelphoto::Application.routes.draw do
-  devise_for :users
+  resources :travel
+
+  get "top/index"
 
   mount RailsAdmin::Engine => '/rails_admin', :as => 'rails_admin'
 
+  devise_for :users
   devise_for :admins
 
+  root :to => "top#index"
   
 
   # The priority is based upon order of creation:
