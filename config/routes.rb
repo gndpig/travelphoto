@@ -1,4 +1,6 @@
 Travelphoto::Application.routes.draw do
+  devise_for :users
+
   mount RailsAdmin::Engine => '/rails_admin', :as => 'rails_admin'
 
   devise_for :admins
